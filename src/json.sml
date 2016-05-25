@@ -71,4 +71,9 @@ struct
     case CharParser.parseString (Parser.jsonObject()) str of
       INL s => raise Fail ("can't parse: " ^ s)
     | INR t => t
+
+  fun getValueByKey obj key =
+    case obj of
+      Array l => List.find (fn (Pair (k, v)) => k = key) l
+    | _ => NONE
 end
