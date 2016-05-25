@@ -1,0 +1,8 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  lib/sml-parcom/parcom.mlb
+
+  src/json.sml
+in
+  structure Json
+end

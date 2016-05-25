@@ -1,0 +1,3 @@
+[submodule "lib/sml-parcom"]
+	path = lib/sml-parcom
+	url = git@github.com:RedPRL/sml-parcom.git
