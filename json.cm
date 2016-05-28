@@ -2,4 +2,7 @@ Group is
   $/basis.cm
   lib/sml-parcom/parcom.cm
 
+  src/syntax.sml
+  src/parser.sml
+  src/pretty.sml
   src/json.sml
