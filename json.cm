@@ -1,5 +1,7 @@
-Group is
-  $/basis.cm
+Library
+  structure Json
+is
+  lib/cmlib/cmlib.cm
   lib/sml-parcom/parcom.cm
 
   src/syntax.sml

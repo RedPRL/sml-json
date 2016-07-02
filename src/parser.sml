@@ -1,6 +1,6 @@
-structure Parser =
+structure JsonParser =
 struct
-  open Syntax
+  open JsonSyntax
 
   open ParserCombinators CharParser
 

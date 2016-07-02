@@ -1,6 +1,6 @@
-structure Pretty =
+structure JsonPretty =
 struct
-  open Syntax
+  open JsonSyntax
 
   fun toString obj =
     case obj of
