@@ -11,8 +11,7 @@ struct
     | (Bool a, Bool b) => a = b
     | (Int a, Int b) => a = b
     | (Array a, Array b) => ListPair.allEq eq (a, b)
-    | (Pair (x, y), Pair (m, n)) => x = m andalso eq (y, n)
-    | (Obj a, Obj b) => ListPair.allEq eq (a, b)
+    | (Obj a, Obj b) => ListPair.allEq (fn ((x, m), (y, n)) => x = y andalso eq (m, n)) (a, b)
     | _ => false
 
   fun parse str =
@@ -22,6 +21,6 @@ struct
 
   fun getValueByKey obj key =
     case obj of
-      Obj l => List.find (fn (Pair (k, v)) => k = key | _ => false) l
+      Obj l => Option.map #2 (List.find (fn (k, v) => k = key) l)
     | _ => NONE
 end

@@ -9,8 +9,10 @@ struct
     | Float f => Real.toString f
     | String s => "\"" ^ s ^ "\""
     | Bool b => Bool.toString b
-    | Pair (a, b) => "\"" ^ a ^ "\": " ^ toString b
-    | Array l => "[" ^ String.concatWith ", " (List.map (fn x => toString x) l)  ^ "]"
-    | Obj l => "{" ^ String.concatWith ", " (List.map (fn x => toString x) l)  ^ "}"
+    | Array l => "[" ^ String.concatWith ", " (List.map toString l)  ^ "]"
+    | Obj l => "{" ^ String.concatWith ", " (List.map prettyPair l)  ^ "}"
+
+  and prettyPair (k, v) =
+    "\"" ^ k ^ "\": " ^ toString v
 
 end

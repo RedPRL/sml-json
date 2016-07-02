@@ -13,7 +13,7 @@ struct
 
   val test1 =
     let
-      val expected = J.Obj ([J.Pair ("name", J.String "Mathew"), J.Pair ("age", J.Int 20), J.Pair ("hobby", J.Array [J.Int 2, J.Int 3, J.String "lol"])])
+      val expected = J.Obj ([("name", J.String "Mathew"), ("age", J.Int 20), ("hobby", J.Array [J.Int 2, J.Int 3, J.String "lol"])])
       val text = "{\"name\":\"Mathew\",\"age\":20, \"hobby\":[2, 3, \"lol\"]}"
     in
       testParse expected text
