@@ -1,8 +1,8 @@
 Library
   structure Json
 is
-  $LIBS/cmlib/cmlib.cm
-  $LIBS/sml-parcom/parcom.cm
+  $libs/cmlib/cmlib.cm
+  $libs/sml-parcom/parcom.cm
 
   src/syntax.sml
   src/parser.sml
