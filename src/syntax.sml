@@ -1,13 +1,11 @@
-structure Syntax =
+structure JsonSyntax =
 struct
-  datatype jsonValue =
-    Pair of (string * jsonValue)
-  | Array of jsonValue list
+  datatype json_value =
+    Array of json_value list
   | Null
   | Float of real
   | String of string
   | Bool of bool
   | Int of int
-  | Obj of jsonValue list
-
+  | Obj of (string * json_value) list
 end

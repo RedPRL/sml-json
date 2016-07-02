@@ -1,6 +1,6 @@
-structure Parser =
+structure JsonParser =
 struct
-  open Syntax
+  open JsonSyntax
 
   open ParserCombinators CharParser
 
@@ -41,6 +41,6 @@ struct
   fun jsonParser() = $jsonObject || $jsonArray || jsonValue
   and jsonArray() = char #"[" >> (separate (skipAround ($jsonParser)) (char #",")) << char #"]" wth Array
   and jsonObject() = char #"{" >> (separate (skipAround ($jsonPair)) (char #",")) << char #"}" wth Obj
-  and jsonPair() = (skipAround stringInQuotes) && char #":" >> skipAround ($jsonParser) wth Pair
+  and jsonPair() = (skipAround stringInQuotes) && char #":" >> skipAround ($jsonParser)
 
 end

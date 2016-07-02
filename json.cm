@@ -1,6 +1,8 @@
-Group is
-  $/basis.cm
-  lib/sml-parcom/parcom.cm
+Library
+  structure Json
+is
+  $libs/cmlib/cmlib.cm
+  $libs/sml-parcom/parcom.cm
 
   src/syntax.sml
   src/parser.sml
