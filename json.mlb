@@ -1,7 +1,7 @@
 local
   $(SML_LIB)/basis/basis.mlb
   $(LIBS)/cmlib/cmlib.mlb
-  $(LIBS)/sml-parcom/parcom.mlb
+  lib/sml-parcom/parcom.mlb
 
   src/syntax.sml
   src/parser.sml
